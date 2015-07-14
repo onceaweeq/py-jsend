@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8c4abe4-0070-4521-bfe4-2da7c60b992d" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.rst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woorism/__init__.py" afterPath="$PROJECT_DIR$/onceaweek/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woorism/tools/__init__.py" afterPath="$PROJECT_DIR$/onceaweek/tools/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woorism/tools/jsend.py" afterPath="$PROJECT_DIR$/onceaweek/tools/jsend.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/py-jsend.iml" afterPath="$PROJECT_DIR$/.idea/py-jsend.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_tool_jsend.py" afterPath="$PROJECT_DIR$/tests/test_tool_jsend.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="py-jsend.iws" />
@@ -57,8 +50,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="182" />
-    <option name="y" value="225" />
+    <option name="x" value="100" />
+    <option name="y" value="23" />
     <option name="width" value="1876" />
     <option name="height" value="1177" />
   </component>
@@ -437,8 +430,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="182" y="225" width="1876" height="1177" extended-state="0" />
-    <editor active="true" />
+    <frame x="100" y="23" width="1876" height="1177" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
