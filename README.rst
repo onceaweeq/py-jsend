@@ -13,9 +13,8 @@ pip install pyjsend
 
 Usage
 -----
-.. code:: python
-from onceaweek.tools import jsend
- 
+
+ from onceaweek.tools import jsend
  jsend.success({'json':'object'})
  jsend.fail({'json:'object'})
  jsend.error('message')
