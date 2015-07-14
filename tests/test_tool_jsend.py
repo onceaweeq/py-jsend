@@ -1,5 +1,5 @@
 from unittest.case import TestCase
-from woorism.tools import jsend
+from onceaweek.tools import jsend
 
 class TestJsend(TestCase):
 	def test_success(self):
