@@ -1,16 +1,23 @@
+import json
+
 __author__ = 'zirony'
+
+
+class DictEx(dict):
+	def jsonify(self):
+		return json.dumps(self)
 
 
 def success(data={}):
 	if not isinstance(data, dict):
 		raise ValueError('data must be the dict type')
-	return {'status': 'success', 'data': data}
+	return DictEx({'status': 'success', 'data': data})
 
 
 def fail(data={}):
 	if not isinstance(data, dict):
 		raise ValueError('data must be the dict type')
-	return {'status': 'fail', 'data': data}
+	return DictEx({'status': 'fail', 'data': data})
 
 
 def error(message='', code=None, data=None):
@@ -28,7 +35,7 @@ def error(message='', code=None, data=None):
 
 	ret['status'] = 'error'
 	ret['message'] = message
-	return ret
+	return DictEx(ret)
 
 
 def is_success(jsend_type):
