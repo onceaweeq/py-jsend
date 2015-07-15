@@ -1,11 +1,11 @@
 py-jsend
 ========
 python jsend
+pypi: https://pypi.python.org/pypi/pyjsend/
 
 About jsend
 -----------
 http://labs.omniti.com/labs/jsend
-
 
 Install
 -------
@@ -14,17 +14,44 @@ pip install pyjsend
 Usage
 -----
 
-An example::
+import module::
 
- from onceaweek.tools import jsend
+ >>> import jsend
 
- # to generate jsend formatted dictionary
- jsend.success({'key':'value'}) 
- # output = {'status':'success', 'data':{'key':'value'}
+success::
 
- jsend.fail({'json':'object'})
- jsend.error('message')
- 
- jsend.is_success(json_string)
- jsend.is_fail(json_string)
- jsend.is_error(json_string)
+ >>> jsend.success({'key': 'value'})
+ {'status': 'success', 'data': {'key': 'value'}}
+
+
+fail::
+
+ >>> jsend.fail({'key': 'value'})
+ {'status': 'fail', 'data': {'key': 'value'}}
+
+error::
+
+ >>> jsend.error('message')
+ {'status': 'error', 'message': 'message'}
+
+is success::
+
+ >>> jsend.is_success({'status':'success'})
+ True
+
+is fail::
+
+ >>> jsend.is_fail({'status':'fail'})
+ True
+
+is error::
+
+ >>> jsend.is_error({'status':'error'})
+ True
+
+
+to json string::
+
+ >>> jsend.success({'key': 'value'}).jsonify()
+ '{"status": "success", "data": {"key": "value"}}'
+
