@@ -1,5 +1,8 @@
+import json
 from unittest.case import TestCase
-from onceaweek.tools import jsend
+
+import jsend
+
 
 class TestJsend(TestCase):
 	def test_success(self):
@@ -51,3 +54,19 @@ class TestJsend(TestCase):
 		except ValueError:
 			return
 		self.fail()
+
+	def test_jsend_to_jsonify(self):
+		ret_json_string = jsend.success().jsonify()
+		ret_json = json.loads(ret_json_string)
+		self.assertTrue(jsend.is_success(ret_json))
+
+
+	def test_jsend_to_jsonify_f(self):
+		ret_json_string = jsend.success().jsonify()
+		try:
+			jsend.is_success(ret_json_string)
+		except TypeError:
+			return
+
+		self.fail()
+
