@@ -70,7 +70,7 @@ class TestJsend(TestCase):
         self.fail()
 
 
-class TestJsendParse(TestCase):
+class TestJsendLoads(TestCase):
     def test_jsend_from_string(self):
         jsend_str = jsend.success(data={'key': 'value'}).stringify()
         jsend_obj = jsend.loads(jsend_str)
