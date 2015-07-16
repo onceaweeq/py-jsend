@@ -38,6 +38,22 @@ def error(message='', code=None, data=None):
     return DictEx(ret)
 
 
+def parse(jsend_string):
+    if not jsend_string:
+        raise ValueError('invalid jsend string is given')
+
+    try:
+        json_data = json.loads(jsend_string)
+    except (TypeError, ValueError):
+        raise ValueError('failed to parse json string')
+
+    if ('status' not in json_data or
+            json_data['status'] not in ('success', 'fail', 'error')):
+        raise ValueError('not in valid jsend type')
+
+    return DictEx(json_data)
+
+
 def is_success(jsend_msg):
     return jsend_msg['status'] == 'success'
 

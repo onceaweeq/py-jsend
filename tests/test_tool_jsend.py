@@ -69,3 +69,9 @@ class TestJsend(TestCase):
 
         self.fail()
 
+
+class TestJsendParse(TestCase):
+    def test_jsend_from_string(self):
+        jsend_str = jsend.success(data={'key': 'value'}).stringify()
+        jsend_obj = jsend.parse(jsend_str)
+        self.assertEqual(jsend_str, jsend_obj.stringify())
