@@ -49,9 +49,11 @@ is error::
  >>> jsend.is_error({'status':'error'})
  True
 
+to json string and load jsend string::
 
-to json string::
-
- >>> jsend.success({'key': 'value'}).jsonify()
+ >>> jsend.success({'key': 'value'}).stringify()
  '{"status": "success", "data": {"key": "value"}}'
+
+ >>> jsend.loads(jsend.success({'key': 'value'}).stringify())
+ {u'status': u'success', u'data': {u'key': u'value'}}
 
