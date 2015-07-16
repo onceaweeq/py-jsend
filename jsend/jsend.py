@@ -38,7 +38,7 @@ def error(message='', code=None, data=None):
     return DictEx(ret)
 
 
-def parse(jsend_string):
+def loads(jsend_string):
     if not jsend_string:
         raise ValueError('invalid jsend string is given')
 
