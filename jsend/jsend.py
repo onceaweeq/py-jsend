@@ -1,10 +1,10 @@
-import json
-
 __author__ = 'zirony'
+
+import json
 
 
 class DictEx(dict):
-    def jsonify(self):
+    def stringify(self):
         return json.dumps(self)
 
 
@@ -38,13 +38,13 @@ def error(message='', code=None, data=None):
     return DictEx(ret)
 
 
-def is_success(jsend_type):
-    return jsend_type['status'] == 'success'
+def is_success(jsend_msg):
+    return jsend_msg['status'] == 'success'
 
 
-def is_fail(jsend_type):
-    return jsend_type['status'] == 'fail'
+def is_fail(jsend_msg):
+    return jsend_msg['status'] == 'fail'
 
 
-def is_error(jsend_type):
-    return jsend_type['status'] == 'error'
+def is_error(jsend_msg):
+    return jsend_msg['status'] == 'error'

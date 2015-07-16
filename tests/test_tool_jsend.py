@@ -55,13 +55,13 @@ class TestJsend(TestCase):
             return
         self.fail()
 
-    def test_jsend_to_jsonify(self):
-        ret_json_string = jsend.success().jsonify()
+    def test_jsend_to_stringify(self):
+        ret_json_string = jsend.success().stringify()
         ret_json = json.loads(ret_json_string)
         self.assertTrue(jsend.is_success(ret_json))
 
-    def test_jsend_to_jsonify_f(self):
-        ret_json_string = jsend.success().jsonify()
+    def test_jsend_to_stringify_f(self):
+        ret_json_string = jsend.success().stringify()
         try:
             jsend.is_success(ret_json_string)
         except TypeError:
