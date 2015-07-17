@@ -20,20 +20,28 @@ import module::
 
 success::
 
- >>> jsend.success({'key': 'value'})
- {'status': 'success', 'data': {'key': 'value'}}
-
+ >>> jsend_obj = jsend.success({'key': 'value'})
+ >>> jsend_obj.status
+ 'success'
+ >>> jsend_obj.data
+ {'key': 'value'}
 
 fail::
 
- >>> jsend.fail({'key': 'value'})
- {'status': 'fail', 'data': {'key': 'value'}}
-
+ >>> jsend_obj = jsend.fail({'key': 'value'})
+ >>> jsend_obj.status
+ 'fail'
+ >>> jsend_obj.data
+ {'key': 'value'}
+ 
 error::
 
- >>> jsend.error('message')
- {'status': 'error', 'message': 'message'}
-
+ >>> jsend_obj = jsend.error('error message')
+ >>> jsend_obj.status
+ 'error'
+ >>> jsend_obj.message
+ 'error message'
+ 
 is success::
 
  >>> jsend_obj = jsend.success({'status':'success'})
@@ -65,3 +73,17 @@ from json string::
  >>> jsend_obj = jsend.loads(json_string)
  >>> jsend_obj.is_success
  True
+
+
+example::
+
+ >>> jsend_obj = jsend.success({'key': 'value'})
+ >>> jsend_obj.status
+ 'success'
+ >>> jsend_obj.data
+ {'key': 'value'}
+ >>> json_obj.data['key']
+ 'value'
+ >>> json_obj.data['key'] = 'value2'
+ >>> json_obj.stringify()
+ '{"status": "success", "data": {"key": "value2"}}'
