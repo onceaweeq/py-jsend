@@ -36,22 +36,31 @@ error::
 
 is success::
 
- >>> jsend.is_success({'status':'success'})
+ >>> jsend_obj = jsend.success({'status':'success'})
+ >>> jsend_obj.is_success
  True
 
 is fail::
 
- >>> jsend.is_fail({'status':'fail'})
+ >>> jsend_obj = jsend.fail({'status':'fail'})
+ >>> jsend_obj.is_fail
  True
 
 is error::
 
- >>> jsend.is_error({'status':'error'})
+ >>> jsend_obj = jsend.error({'status':'error'})
+ >>> jsend_obj.is_error
  True
 
 
 to json string::
 
- >>> jsend.success({'key': 'value'}).jsonify()
+ >>> jsend.success({'key': 'value'}).stringify()
  '{"status": "success", "data": {"key": "value"}}'
 
+
+from json string::
+ >>> json_string = '{"status": "success", "data": {"key": "value"}}'
+ >>> jsend_obj = jsend.loads(json_string)
+ >>> jsend_obj.is_success
+ True
