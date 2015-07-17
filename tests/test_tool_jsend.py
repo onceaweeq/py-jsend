@@ -6,9 +6,9 @@ import jsend
 
 class TestJsend(TestCase):
     def test_success(self):
-        ret = jsend.success(data={'key': 'value'})
-        self.assertTrue(jsend.is_success(ret))
-        self.assertEqual(ret['data']['key'], 'value')
+        jsend_obj = jsend.success(data={'key': 'value'})
+        self.assertTrue(jsend_obj.is_success)
+        self.assertEqual(jsend_obj.data['key'], 'value')
 
     def test_success_data_must_be_dict(self):
         try:
@@ -18,9 +18,9 @@ class TestJsend(TestCase):
         self.fail()
 
     def test_fail(self):
-        ret = jsend.fail(data={'key': 'value'})
-        self.assertTrue(jsend.is_fail(ret))
-        self.assertEqual(ret['data']['key'], 'value')
+        jsend_obj = jsend.fail(data={'key': 'value'})
+        self.assertTrue(jsend_obj.is_fail)
+        self.assertEqual(jsend_obj.data['key'], 'value')
 
     def test_fail_data_must_be_dict(self):
         try:
@@ -30,9 +30,9 @@ class TestJsend(TestCase):
         self.fail()
 
     def test_error(self):
-        ret = jsend.error(message='error message')
-        self.assertTrue(jsend.is_error(ret))
-        self.assertEqual(ret['message'], 'error message')
+        jsend_obj = jsend.error(message='error message')
+        self.assertTrue(jsend_obj.is_error)
+        self.assertEqual(jsend_obj.message, 'error message')
 
     def test_error_message_must_be_str(self):
         try:
@@ -57,17 +57,8 @@ class TestJsend(TestCase):
 
     def test_jsend_to_stringify(self):
         ret_json_string = jsend.success().stringify()
-        ret_json = json.loads(ret_json_string)
-        self.assertTrue(jsend.is_success(ret_json))
-
-    def test_jsend_to_stringify_f(self):
-        ret_json_string = jsend.success().stringify()
-        try:
-            jsend.is_success(ret_json_string)
-        except TypeError:
-            return
-
-        self.fail()
+        jsend_obj = jsend.loads(ret_json_string)
+        self.assertTrue(jsend_obj.is_success)
 
 
 class TestJsendParse(TestCase):
@@ -75,3 +66,4 @@ class TestJsendParse(TestCase):
         jsend_str = jsend.success(data={'key': 'value'}).stringify()
         jsend_obj = jsend.loads(jsend_str)
         self.assertEqual(jsend_str, jsend_obj.stringify())
+        self.assertTrue(jsend_obj.is_success)
