@@ -60,6 +60,7 @@ to json string::
 
 
 from json string::
+
  >>> json_string = '{"status": "success", "data": {"key": "value"}}'
  >>> jsend_obj = jsend.loads(json_string)
  >>> jsend_obj.is_success
