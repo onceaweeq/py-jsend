@@ -1,11 +1,3 @@
-.. image:: https://pypip.in/v/pyjsend/badge.png
-    :target: https://pypi.python.org/pypi/pyjsend/
-    :alt: Latest PyPI version
-
-.. image:: https://pypip.in/d/pyjsend/badge.png
-    :target: https://pypi.python.org/pypi/pyjsend/
-    :alt: Number of PyPI downloads
-
 py-jsend
 ========
 python jsend
@@ -14,6 +6,14 @@ pypi: https://pypi.python.org/pypi/pyjsend/
 About jsend
 -----------
 http://labs.omniti.com/labs/jsend
+
+PyPI status:
+
+.. image:: https://pypip.in/v/pyjsend/badge.png
+    :target: https://pypi.python.org/pypi/pyjsend/
+
+.. image:: https://pypip.in/d/pyjsend/badge.png
+    :target: https://pypi.python.org/pypi/pyjsend/
 
 Install
 -------
