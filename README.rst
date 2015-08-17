@@ -1,3 +1,6 @@
+[![PyPi version](https://pypip.in/v/pyjsend/badge.png)](https://crate.io/packages/pyjsend/)
+[![PyPi downloads](https://pypip.in/d/pyjsend/badge.png)](https://crate.io/packages/pyjsend/)
+
 py-jsend
 ========
 python jsend
