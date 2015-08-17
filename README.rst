@@ -1,5 +1,10 @@
-[![PyPi version](https://pypip.in/v/pyjsend/badge.png)](https://crate.io/packages/pyjsend/)
-[![PyPi downloads](https://pypip.in/d/pyjsend/badge.png)](https://crate.io/packages/pyjsend/)
+.. image:: https://pypip.in/v/pyjsend/badge.png
+    :target: https://crate.io/packages/pyjsend/
+    :alt: Latest PyPI version
+
+.. image:: https://pypip.in/d/pyjsend/badge.png
+    :target: https://crate.io/packages/pyjsend/
+    :alt: Number of PyPI downloads
 
 py-jsend
 ========
