@@ -1,9 +1,9 @@
 .. image:: https://pypip.in/v/pyjsend/badge.png
-    :target: https://crate.io/packages/pyjsend/
+    :target: https://pypi.python.org/pypi/pyjsend/
     :alt: Latest PyPI version
 
 .. image:: https://pypip.in/d/pyjsend/badge.png
-    :target: https://crate.io/packages/pyjsend/
+    :target: https://pypi.python.org/pypi/pyjsend/
     :alt: Number of PyPI downloads
 
 py-jsend
