@@ -7,6 +7,14 @@ About jsend
 -----------
 http://labs.omniti.com/labs/jsend
 
+PyPI status:
+
+.. image:: https://pypip.in/v/pyjsend/badge.png
+    :target: https://pypi.python.org/pypi/pyjsend/
+
+.. image:: https://pypip.in/d/pyjsend/badge.png
+    :target: https://pypi.python.org/pypi/pyjsend/
+
 Install
 -------
 pip install pyjsend
