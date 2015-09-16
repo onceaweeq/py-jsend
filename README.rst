@@ -3,17 +3,17 @@ py-jsend
 python jsend
 pypi: https://pypi.python.org/pypi/pyjsend/
 
+.. image:: https://travis-ci.org/onceaweeq/py-jsend.svg?branch=master
+    :target: https://travis-ci.org/onceaweeq/py-jsend
+
+.. image:: https://badge.fury.io/py/pyjsend.svg
+    :target: http://badge.fury.io/py/pyjsend
+
+
 About jsend
 -----------
 http://labs.omniti.com/labs/jsend
 
-PyPI status:
-
-.. image:: https://pypip.in/v/pyjsend/badge.png
-    :target: https://pypi.python.org/pypi/pyjsend/
-
-.. image:: https://pypip.in/d/pyjsend/badge.png
-    :target: https://pypi.python.org/pypi/pyjsend/
 
 Install
 -------
