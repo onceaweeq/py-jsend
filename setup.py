@@ -20,7 +20,7 @@ setup(
     url='https://github.com/onceaweeq/py-jsend',
 
     author='Juncheol Cho',
-    author_email='ziron1397@gmail.com',
+    author_email='zironycho@gmail.com',
 
     # Choose your license
     license='MIT',
