@@ -34,6 +34,16 @@ class TestJsend(TestCase):
         self.assertTrue(jsend.is_error(ret))
         self.assertEqual(ret['message'], 'error message')
 
+    def test_error_unicode(self):
+        ret = jsend.error(message=u'error message')
+        self.assertTrue(jsend.is_error(ret))
+        self.assertEqual(ret['message'], u'error message')
+
+    def test_error_bytes(self):
+        ret = jsend.error(message=b'error message')
+        self.assertTrue(jsend.is_error(ret))
+        self.assertEqual(ret['message'], b'error message')
+
     def test_error_message_must_be_str(self):
         try:
             jsend.error(message=1)
