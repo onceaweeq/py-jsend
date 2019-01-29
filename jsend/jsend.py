@@ -2,6 +2,11 @@ __author__ = 'zirony'
 
 import json
 
+# Support Python 2/3 unicode
+try:
+    strtype = unicode
+except:
+    strtype = bytes
 
 class DictEx(dict):
     def stringify(self):
@@ -22,7 +27,7 @@ def fail(data={}):
 
 def error(message='', code=None, data=None):
     ret = {}
-    if not isinstance(message, str):
+    if (not isinstance(message, str)) and (not isinstance(message, strtype)):
         raise ValueError('message must be the str type')
     if code:
         if not isinstance(code, int):
