@@ -1,18 +1,22 @@
 language: python
 python:
-  - "2.7"
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "3.6"
-  - "3.7"
+- '2.7'
+- '3.3'
+- '3.4'
+- '3.5'
+- '3.6'
+- '3.7'
 branches:
   only:
-    - develop
-    - master
-
-# command to install dependencies
-# install: "pip install -r requirements.txt"
-
-# # command to run tests
+  - develop
+  - master
 script: nosetests
+deploy:
+  provider: pypi
+  user: zironycho
+  password:
+    secure: dhAWcblB0rL747T6E4FYFXnw/TcsfPLuelW1EhwUFwvzkRDi5C8IrMX48RpgD8DcF7F75JoBa8h0QaDzPGm9OyA6ojHYXcA+S8OzJgmHHjAa6Xf3zjDa5HYprMRsnDyzPexX/rZ0gnZOV1ZW5L2zbMRpwCKfJVkxDffDMOKzRZ+qCObtAz2pW52iWBFedHnBUK27gmeKQ7OaWap5v+g3OO2VJjqBXDJ4oRYYU7OTPOJCm/Mkkq/cPDyx7AIATcKRbUIy6cEINd066YS3fcLkduOCWm6cSgzlYv8JsixY6qIhw91slDL0+mCQck9uThbaD28uH8hcrWz8lwY/ilkJoEbmJaPqqsVSpCjIxifrzPK+UjgAKAUanKzQgPWvIChCzTfTVmS0zYnx9E+vwo5Rm2DuJvBRzNvAT1pqRRO59p3VGDidgasLUgR5NK29Q/Ra9xDlQYEIksfF3PkX/ZWfR5h1PMqpt2uPwWp4B5CBvyXE9Wb5tpdg+SYxgFgppdvAVr4fYrwrz0akVGAykgFstatjyQFpTYOQwJLuXSp8Z8cgOBR+CuFPvfPrS0SdGQm12PKXmtzgKFOCkQBrusvwXwdu7eIwVPsYA7XrR+MUQGKM6yCdrc9fbdu/IJI7RorGF7BKRCrl1pota+sf1vzNlhmqilBaEOujx1aZCtd6G+s=
+  on:
+    branch: master
+  distributions: "bdist_wheel"
+  skip_existing: true
