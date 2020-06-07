@@ -31,6 +31,8 @@ success::
  >>> jsend.success({'key': 'value'})
  {'status': 'success', 'data': {'key': 'value'}}
 
+ >>> jsend.success(data={'key': 'value'}, meta={'meta_key': 'meta_val'})
+ {'status': 'success', 'data': {'key': 'value'}, 'meta': {'meta_key', 'meta_val'}}
 
 fail::
 
