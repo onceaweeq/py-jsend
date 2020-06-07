@@ -2,21 +2,29 @@ __author__ = 'zirony'
 
 import json
 
+
 # Support Python 2/3 unicode
 try:
     strtype = unicode
 except:
     strtype = bytes
 
+
 class DictEx(dict):
     def stringify(self):
         return json.dumps(self)
 
 
-def success(data={}):
-    if not isinstance(data, dict):
+def success(data={}, meta=None):
+    ret = {}
+    if not isinstance(data, dict) or (meta and not isinstance(meta, dict)):
         raise ValueError('data must be the dict type')
-    return DictEx({'status': 'success', 'data': data})
+    ret['status'] = 'success'
+    ret['data'] = data
+    if meta:
+        ret['meta']=meta
+
+    return DictEx(ret)
 
 
 def fail(data={}):

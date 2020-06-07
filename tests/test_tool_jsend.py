@@ -10,9 +10,21 @@ class TestJsend(TestCase):
         self.assertTrue(jsend.is_success(ret))
         self.assertEqual(ret['data']['key'], 'value')
 
+    def test_success_with_meta(self):
+        ret = jsend.success(data={'key': 'value'}, meta={'meta_key': 'meta_value'})
+        self.assertTrue(ret['meta']['meta_key'], 'meta_value')
+        self.assertTrue(ret['data']['key'], 'value')
+
     def test_success_data_must_be_dict(self):
         try:
             jsend.success(data=1)
+        except ValueError:
+            return
+        self.fail()
+
+    def test_success_meta_must_be_dict(self):
+        try:
+            jsend.success(data={'key', 'value'}, meta=1)
         except ValueError:
             return
         self.fail()
