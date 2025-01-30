@@ -8,9 +8,10 @@ try:
 except:
     strtype = bytes
 
+
 class DictEx(dict):
-    def stringify(self):
-        return json.dumps(self)
+    def stringify(self, ensure_ascii=True):
+        return json.dumps(self, ensure_ascii=ensure_ascii)
 
 
 def success(data={}):
